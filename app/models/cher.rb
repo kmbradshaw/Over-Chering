@@ -1,6 +1,6 @@
 require 'twitter'
 require 'sentimental'
-require 'gemoji'
+
 
 class CherTweet
 
@@ -66,7 +66,7 @@ class CherTweet
   private
 
   def get_tweets(count)
-    client.user_timeline(username, count: count)
+    @tweets = client.user_timeline(username, count: count)
   end
 
   def has_hearts(tweet)
